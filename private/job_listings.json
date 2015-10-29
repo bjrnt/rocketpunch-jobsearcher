@@ -1,44 +1,44 @@
-﻿[
-  {
-    "title":"Example Post #1: Cool app developer",
-    "company":"앱메이커스 (AppMakers)",
-    "role":"개발자",
-    "experience":"경력",
-    "salary":"최소 4,000 만원",
-    "location":"대한민국 서울특별시 강남구",
-    "duty":"",
-    "content":"",
-    "statement":"",
-    "benefits":{},
-    "introduction":"",
-    "url":"https://www.google.com"
-  },
-  {
-    "title":"Example Post #2: Awesome Marketer",
-    "company":"앱메이커스 (AppMakers)",
-    "role":"마케터",
-    "experience":"신입 경력",
-    "salary":"2,000~4,000 만원",
-    "location":"대한민국 서울특별시 강남구 원격 근무",
-    "duty":"",
-    "content":"",
-    "statement":"",
-    "benefits":{},
-    "introduction":"",
-    "url":"https://www.google.com"
-  },
-  {
-    "title":"Example Post #3: iOS Developer",
-    "company":"앱메이커스 (AppMakers)",
-    "role":"개발자",
-    "experience":"신입 경력",
-    "salary":"3,600~4,800 만원",
-    "location":"대한민국 서울특별시 강남구 원격 근무",
-    "duty":"",
-    "content":"",
-    "statement":"",
-    "benefits":{},
-    "introduction":"",
-    "url":"https://www.google.com"
-  }
+[
+    {
+        "title": "Example Post #1: Cool app developer",
+        "company": "앱메이커스 (AppMakers)",
+        "role": "개발자",
+        "experience": "경력",
+        "salary": "최소 4,000 만원",
+        "location": "대한민국 서울특별시 강남구",
+        "duty": "",
+        "content": "",
+        "statement": "",
+        "benefits": {},
+        "introduction": "",
+        "url": "https://www.google.com"
+    },
+    {
+        "title": "Example Post #2: Awesome Marketer",
+        "company": "앱메이커스 (AppMakers)",
+        "role": "마케터",
+        "experience": "신입 경력",
+        "salary": "2,000~4,000 만원",
+        "location": "대한민국 서울특별시 강남구 원격 근무",
+        "duty": "",
+        "content": "",
+        "statement": "",
+        "benefits": {},
+        "introduction": "",
+        "url": "https://www.google.com"
+    },
+    {
+        "title": "Example Post #3: iOS Developer",
+        "company": "앱메이커스 (AppMakers)",
+        "role": "개발자",
+        "experience": "신입 경력",
+        "salary": "3,600~4,800 만원",
+        "location": "대한민국 서울특별시 강남구 원격 근무",
+        "duty": "",
+        "content": "",
+        "statement": "",
+        "benefits": {},
+        "introduction": "",
+        "url": "https://www.google.com"
+    }
 ]
