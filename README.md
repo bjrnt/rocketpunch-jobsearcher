@@ -1,7 +1,7 @@
 # RocketPunch Job Searcher
 A web app for performing full-text search on job ads posted on RocketPunch.
 
-**Note:** no code for scraping job ads from RocketPunch is provided together with this. There are three example job ads in `private/job_listings.json` that will be loaded by default. I will host a version of this with a full set of job ads soon.
+**Note:** no code for scraping job ads from RocketPunch is provided together with this. There are three example job ads in `private/job_listings.json` that will be loaded by default. I will host a version of this with a full set of job ads soon. Also note that the service is completely in Korean.
 
 #### Motivation
 
@@ -17,3 +17,8 @@ This app consists of a front-end built with [React.js](https://facebook.github.i
 4. Browse to `http://localhost:3000` to access the app
 
 Any keywords entered into the search box will be used to filter job ads.
+
+#### TODO
+
+* Put the search query in the url so that the same search results can later easily be found again
+* Limit search results to a maximum of 100 ads

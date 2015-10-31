@@ -12,7 +12,7 @@ Listing = React.createClass({
         <td>
           <button
           type='button'
-          className='btn btn-xs viewButton pull-right'
+          className='btn btn-primary btn-xs viewButton pull-right'
           onClick={_.partial(window.open, this.props.listing.url, '_blank')}>보기</button>
         </td>
       </tr>

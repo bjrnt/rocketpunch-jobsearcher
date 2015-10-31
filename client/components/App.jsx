@@ -67,7 +67,7 @@ App = React.createClass({
             />
           </header>
         </div>
-        <div className='row table-responsive panel'>
+        <div className='row table-responsive panel panel-shaded'>
           {this.renderTable()}
         </div>
       </div>
