@@ -20,5 +20,5 @@ Any keywords entered into the search box will be used to filter job ads.
 
 #### TODO
 
-* Put the search query in the url so that the same search results can later easily be found again
+* Fix the bug where the footer lands in the middle of the search results if there are a lot of results
 * Limit search results to a maximum of 100 ads
