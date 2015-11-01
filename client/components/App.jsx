@@ -3,7 +3,7 @@ App = React.createClass({
 
   getInitialState() {
     return {
-      filter: ''
+      filter: decodeURIComponent(getSearchParameters()['filter'] || '')
     };
   },
 
@@ -75,6 +75,7 @@ App = React.createClass({
   },
 
   onFilterValueChange(value) {
+    window.history.replaceState({}, document.title, editParams('filter', value));
     this.setState({
       filter: value
     });
@@ -84,3 +85,49 @@ App = React.createClass({
     return this.state.filter.length >= 2;
   }
 });
+
+// add/change/remove URL parameter
+// use a value of false to remove parameter
+// returns a url-style string
+function editParams (key, value) {
+  key = encodeURI(key);
+
+  var params = getSearchParameters();
+
+  if (Object.keys(params).length === 0) {
+    if (value !== false)
+      return '?' + key + '=' + encodeURI(value);
+    else
+      return '';
+  }
+
+  if (value !== false)
+    params[key] = encodeURI(value);
+  else
+    delete params[key];
+
+  if (Object.keys(params).length === 0)
+    return '';
+
+  return '?' + $.map(params, function (value, key) {
+    return key + '=' + value;
+  }).join('&');
+}
+
+// Get object/associative array of URL parameters
+function getSearchParameters () {
+  var prmstr = window.location.search.substr(1);
+  return prmstr !== null && prmstr !== "" ? transformToAssocArray(prmstr) : {};
+}
+
+// convert parameters from url-style string to associative array
+function transformToAssocArray (prmstr) {
+  var params = {},
+      prmarr = prmstr.split("&");
+
+  for (var i = 0; i < prmarr.length; i++) {
+    var tmparr = prmarr[i].split("=");
+    params[tmparr[0]] = tmparr[1];
+  }
+  return params;
+}

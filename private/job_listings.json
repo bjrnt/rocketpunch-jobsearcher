@@ -11,7 +11,8 @@
         "statement": "",
         "benefits": {},
         "introduction": "",
-        "url": "https://www.google.com"
+        "url": "https://www.google.com",
+        "timestamp": "Sun Nov 01 2015 21:21:47 GMT+0900 (KST)"
     },
     {
         "title": "Example Post #2: Awesome Marketer",
@@ -25,7 +26,8 @@
         "statement": "",
         "benefits": {},
         "introduction": "",
-        "url": "https://www.google.com"
+        "url": "https://www.google.com",
+        "timestamp": "Sun Nov 01 2015 21:21:47 GMT+0900 (KST)"
     },
     {
         "title": "Example Post #3: iOS Developer",
@@ -39,6 +41,7 @@
         "statement": "",
         "benefits": {},
         "introduction": "",
-        "url": "https://www.google.com"
+        "url": "https://www.google.com",
+        "timestamp": "Sun Nov 01 2015 21:21:47 GMT+0900 (KST)"
     }
 ]

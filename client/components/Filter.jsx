@@ -35,7 +35,7 @@ Filter = React.createClass({
           placeholder='필터...'
           className='form-control filterInput'
           onChange={_.debounce(this.handleValueChange, 200)}
-          defaultValue={this.props.filter.value}
+          defaultValue={this.props.filter}
           ref='inputValue'
           />
         </div>
