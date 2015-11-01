@@ -14,6 +14,6 @@ if(Meteor.isServer) {
     let query = searchValue.split(' ').map((term) => {
       return '\"' + term + '\"';
     }).join(' ');
-    return Listings.find({$text: {$search: query}}, {title: 1, experience: 1, company: 1});
+    return Listings.find({$text: {$search: query}}, {title: 1, experience: 1, company: 1, limit: 50, sort: {timestamp: -1}});
   });
 }

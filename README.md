@@ -18,7 +18,3 @@ This app consists of a front-end built with [React.js](https://facebook.github.i
 
 Any keywords entered into the search box will be used to filter job ads.
 
-#### TODO
-
-* Fix the bug where the footer lands in the middle of the search results if there are a lot of results
-* Limit search results to a maximum of 100 ads
