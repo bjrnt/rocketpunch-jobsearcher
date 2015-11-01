@@ -1,5 +1,15 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 2em;
+}
+
 tr {
   max-height: 1.5em;
 }
