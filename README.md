@@ -1,7 +1,7 @@
 # RocketPunch Job Searcher
 A web app for performing full-text search on job ads posted on RocketPunch.
 
-**Note:** no code for scraping job ads from RocketPunch is provided together with this. There are three example job ads in `private/job_listings.json` that will be loaded by default. I will host a version of this with a full set of job ads soon. Also note that the service is completely in Korean.
+**Note:** no code for scraping job ads from RocketPunch is provided together with this. There are three example job ads in `private/job_listings.json` that will be loaded by default. There is a live version of this running with a mostly complete list of job ads at [bjrn.io/rpjs](http://bjrn.io/rpjs). Also note that the service is completely in Korean.
 
 #### Motivation
 
