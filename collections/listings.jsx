@@ -1,5 +1,8 @@
 Listings = new Mongo.Collection('listings');
 
+// Ugly fix - Loggly does not support unicode
+var formatForeignString = (s) => { return s; };
+
 function setupLogger(config) {
   let winston = Meteor.npmRequire('winston');
   logger = new winston.Logger({
@@ -12,6 +15,7 @@ function setupLogger(config) {
   if(config.loggly) {
     Meteor.npmRequire('winston-loggly');
     logger.add(winston.transports.Loggly, config.loggly);
+    formatForeignString = (s) => { return encodeURIComponent(s) };
   }
 
   return logger;
@@ -37,7 +41,7 @@ if(Meteor.isServer) {
     }).join(' ');
 
     logger.log('info', {
-      query: query,
+      query: formatForeignString(query),
       ip: this.connection.clientAddress
     });
 
