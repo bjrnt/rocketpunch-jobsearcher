@@ -1,6 +1,27 @@
 Listings = new Mongo.Collection('listings');
 
+function setupLogger(config) {
+  let winston = Meteor.npmRequire('winston');
+  logger = new winston.Logger({
+    level: 'info',
+    transports: [
+      new (winston.transports.Console)()
+    ]
+  });
+
+  if(config.loggly) {
+    Meteor.npmRequire('winston-loggly');
+    logger.add(winston.transports.Loggly, config.loggly);
+  }
+
+  return logger;
+}
+
 if(Meteor.isServer) {
+  let config = JSON.parse(Assets.getText('config.json'));
+
+  logger = setupLogger(config);
+
   // Ensure that we have a text index on all listings so that $text queries can be used
   Listings._ensureIndex({
     "$**": "text"
@@ -14,6 +35,12 @@ if(Meteor.isServer) {
     let query = searchValue.split(' ').map((term) => {
       return '\"' + term + '\"';
     }).join(' ');
+
+    logger.log('info', {
+      query: query,
+      ip: this.connection.clientAddress
+    });
+
     return Listings.find({$text: {$search: query}}, {title: 1, experience: 1, company: 1, limit: 50, sort: {timestamp: -1}});
   });
 }

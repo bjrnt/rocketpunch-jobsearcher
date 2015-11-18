@@ -1,0 +1,4 @@
+{
+	"winston": "2.1.0",
+	"winston-loggly": "1.2.0"
+}
